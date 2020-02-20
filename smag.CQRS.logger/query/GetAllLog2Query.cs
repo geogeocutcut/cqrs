@@ -5,7 +5,7 @@ using System.Text;
 
 namespace smag.CQRS.logger
 {
-    public class GetAllLogRead2Query : IQuery<IList<Log>>
+    public class GetAllLog2Query : IQuery<IList<Log>>
     {
     }
 }

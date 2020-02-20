@@ -29,7 +29,7 @@ namespace smag.CQRS.logger.controller
 
         public IList<Log> GetAllLogsRead2()
         {
-            return _QueryBus.Dispatch<IList<Log>, GetAllLogRead2Query>(new GetAllLogRead2Query());
+            return _QueryBus.Dispatch<IList<Log>, GetAllLog2Query>(new GetAllLog2Query());
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TestConsole
             cmdBus.Subscribe(typeof(AddLogCommand), new AddLogCommandHandler(new LogRepository(storeWrite)));
             IQueryBus queryBus = new QueryBus();
             queryBus.Subscribe(typeof(GetAllLogQuery), new GetAllLogQueryHandler(new LogRepository(storeRead)));
-            queryBus.Subscribe(typeof(GetAllLogRead2Query), new GetAllLogRead2QueryHandler(new LogRepository(storeRead2)));
+            queryBus.Subscribe(typeof(GetAllLog2Query), new GetAllLog2QueryHandler(new LogRepository(storeRead2)));
 
             LogController ctrl = new LogController(cmdBus,queryBus);
 
