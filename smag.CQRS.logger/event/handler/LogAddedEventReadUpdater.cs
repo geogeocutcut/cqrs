@@ -9,7 +9,7 @@ namespace smag.CQRS.logger
     public class LogAddedEventReadUpdater : core.EventHandler<LogAddedEvent>
     {
         public IRepository<Guid, Log> repo;
-        public LogAddedEventReadUpdater(LogRepository repoTmp)
+        public LogAddedEventReadUpdater(IRepository<Guid, Log> repoTmp)
         {
             repo = repoTmp;
         }

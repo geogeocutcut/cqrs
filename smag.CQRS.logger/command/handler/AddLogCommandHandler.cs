@@ -9,9 +9,9 @@ namespace smag.CQRS.logger.command.handler
     public class AddLogCommandHandler:CommandHandler<IList<IEvent>,AddLogCommand>
     {
         public IRepository<Guid, Log> repo;
+        
 
-        public IList<IEvent> events = new List<IEvent>();
-        public AddLogCommandHandler(LogRepository repoTmp)
+        public AddLogCommandHandler(IRepository<Guid, Log> repoTmp)
         {
             repo = repoTmp;
         }
@@ -21,8 +21,7 @@ namespace smag.CQRS.logger.command.handler
             Log log = commandtodo.log;
             repo.Add(log);
 
-            events.Add(new LogAddedEvent(log));
-            return events;
+            return new List<IEvent> { new LogAddedEvent(log) };
         }
     }
 }

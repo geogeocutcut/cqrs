@@ -9,7 +9,7 @@ namespace smag.CQRS.logger.query
     public class GetAllLogQueryHandler : QueryHandler<IList<Log>, GetAllLogQuery>
     {
         public IRepository<Guid, Log> repo;
-        public GetAllLogQueryHandler(LogRepository repoTmp)
+        public GetAllLogQueryHandler(IRepository<Guid, Log> repoTmp)
         {
             repo = repoTmp;
         }
