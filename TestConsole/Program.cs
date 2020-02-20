@@ -14,7 +14,6 @@ namespace TestConsole
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            LogController ctrl = new LogController();
             InMemoryLogStore storeWrite = new InMemoryLogStore();
             InMemoryLogStore storeRead = new InMemoryLogStore();
             InMemoryLogStore storeRead2 = new InMemoryLogStore();
@@ -27,26 +26,28 @@ namespace TestConsole
 
             ICommandBus cmdBus = new CommandBus(evntBus);
             cmdBus.Subscribe(typeof(AddLogCommand), new AddLogCommandHandler(new LogRepository(storeWrite)));
-            ctrl.AddMessage(cmdBus, "test");
-            ctrl.AddMessage(cmdBus, "test2");
-            ctrl.AddMessage(cmdBus, "test3");
-
-
             IQueryBus queryBus = new QueryBus();
             queryBus.Subscribe(typeof(GetAllLogQuery), new GetAllLogQueryHandler(new LogRepository(storeRead)));
-            var logs =ctrl.GetAllLogs(queryBus);
+            queryBus.Subscribe(typeof(GetAllLogRead2Query), new GetAllLogRead2QueryHandler(new LogRepository(storeRead2)));
 
-            ctrl.AddMessage(cmdBus, "test4");
+            LogController ctrl = new LogController(cmdBus,queryBus);
 
+            // Envoi Command Add
+            ctrl.AddMessage("test");
+            ctrl.AddMessage("test2");
+            ctrl.AddMessage("test3");
+
+            // Envoi Query GetAll
+            var logs =ctrl.GetAllLogs();
             foreach (Log log in logs)
             {
                 Console.WriteLine("Log : {0} - {1}", log.Id, log.Message);
             }
 
-            
-            queryBus.Subscribe(typeof(GetAllLogRead2Query), new GetAllLogRead2QueryHandler(new LogRepository(storeRead2)));
-            logs = ctrl.GetAllLogsRead2(queryBus);
-
+            // Envoi Command Add
+            ctrl.AddMessage("test4");
+            // Envoi Query GetAll2
+            logs = ctrl.GetAllLogsRead2();
             foreach (Log log in logs)
             {
                 Console.WriteLine("Log : {0} - {1}", log.Id, log.Message);

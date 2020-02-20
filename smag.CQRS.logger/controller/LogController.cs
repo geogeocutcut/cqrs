@@ -7,25 +7,29 @@ namespace smag.CQRS.logger.controller
 {
     public class LogController
     {
-        public LogController()
+        private ICommandBus _CmdBus;
+        private IQueryBus _QueryBus;
+        public LogController(ICommandBus cmdbus, IQueryBus querybus)
         {
+            _CmdBus = cmdbus;
+            _QueryBus = querybus;
         }
 
-        public void AddMessage(ICommandBus bus,string message)
+        public void AddMessage(string message)
         {
             Log log = new Log();
             log.updateMessage(message);
-            bus.Dispatch<IList<IEvent>, AddLogCommand>(new AddLogCommand(log));
+            _CmdBus.Dispatch<IList<IEvent>, AddLogCommand>(new AddLogCommand(log));
         }
 
-        public IList<Log> GetAllLogs(IQueryBus bus)
+        public IList<Log> GetAllLogs()
         {
-            return bus.Dispatch<IList<Log>, GetAllLogQuery>(new GetAllLogQuery());
+            return _QueryBus.Dispatch<IList<Log>, GetAllLogQuery>(new GetAllLogQuery());
         }
 
-        public IList<Log> GetAllLogsRead2(IQueryBus bus)
+        public IList<Log> GetAllLogsRead2()
         {
-            return bus.Dispatch<IList<Log>, GetAllLogRead2Query>(new GetAllLogRead2Query());
+            return _QueryBus.Dispatch<IList<Log>, GetAllLogRead2Query>(new GetAllLogRead2Query());
         }
     }
 }
