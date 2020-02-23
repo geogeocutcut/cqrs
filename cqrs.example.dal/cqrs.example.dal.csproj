@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\cqrs.example.aggregate\cqrs.example.aggregate.csproj" />
+    <ProjectReference Include="..\cqrs.core.dal\cqrs.core.dal.csproj" />
+  </ItemGroup>
+
+</Project>

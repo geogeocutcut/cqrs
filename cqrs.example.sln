@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cqrs.example.bus", "cqrs.example.bus\cqrs.example.bus.csproj", "{12F6A39C-C1CB-42D4-846A-7627BB06FB25}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cqrs.core", "cqrs.core\cqrs.core.csproj", "{1946EE64-5C83-4FD2-9FFD-7D81FA3027CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cqrs.core.dal", "cqrs.core.dal\cqrs.core.dal.csproj", "{25364627-4343-4D20-8998-458E7B8EDAE5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cqrs.example.test", "cqrs.example.test\cqrs.example.test.csproj", "{635B04EA-0787-4891-8501-484BA5F77BCF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cqrs.example.dal", "cqrs.example.dal\cqrs.example.dal.csproj", "{8DAF3509-0DD9-4FB6-9E55-5357BEA97261}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00-core", "00-core", "{E0CD92D3-D7AE-4BB5-9D1F-472B80CF2F44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-dal", "02-dal", "{F01F6C0A-B15D-410B-8661-2A4DCFC0165D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-bus", "03-bus", "{D2785A03-DC2C-45F9-89F3-9E485FDB1DA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-controller", "04-controller", "{5BA273C5-448E-4C0E-BFE2-DF9FF81A80E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cqrs.example.controller", "cqrs.example.controller\cqrs.example.controller.csproj", "{3FBACED1-6F03-4AE2-AEB2-45A4953E94EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-test", "05-test", "{ECF20CAE-ADBC-47AC-9A5A-C1D8BAC0AD90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cqrs.core.tools", "cqrs.core.tools\cqrs.core.tools.csproj", "{B2B240D3-373A-4ABE-8C36-5978C4A633B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-Model", "01-Model", "{0067C5B3-13AD-4244-95DC-5EBC77C7E064}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cqrs.example.aggregate", "cqrs.example.aggregate\cqrs.example.aggregate.csproj", "{33B67F8E-04E4-4B34-A243-3DD2EA2DC936}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12F6A39C-C1CB-42D4-846A-7627BB06FB25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F6A39C-C1CB-42D4-846A-7627BB06FB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F6A39C-C1CB-42D4-846A-7627BB06FB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F6A39C-C1CB-42D4-846A-7627BB06FB25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1946EE64-5C83-4FD2-9FFD-7D81FA3027CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1946EE64-5C83-4FD2-9FFD-7D81FA3027CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1946EE64-5C83-4FD2-9FFD-7D81FA3027CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1946EE64-5C83-4FD2-9FFD-7D81FA3027CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25364627-4343-4D20-8998-458E7B8EDAE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25364627-4343-4D20-8998-458E7B8EDAE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25364627-4343-4D20-8998-458E7B8EDAE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25364627-4343-4D20-8998-458E7B8EDAE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{635B04EA-0787-4891-8501-484BA5F77BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{635B04EA-0787-4891-8501-484BA5F77BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{635B04EA-0787-4891-8501-484BA5F77BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{635B04EA-0787-4891-8501-484BA5F77BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DAF3509-0DD9-4FB6-9E55-5357BEA97261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DAF3509-0DD9-4FB6-9E55-5357BEA97261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DAF3509-0DD9-4FB6-9E55-5357BEA97261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DAF3509-0DD9-4FB6-9E55-5357BEA97261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FBACED1-6F03-4AE2-AEB2-45A4953E94EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FBACED1-6F03-4AE2-AEB2-45A4953E94EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FBACED1-6F03-4AE2-AEB2-45A4953E94EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FBACED1-6F03-4AE2-AEB2-45A4953E94EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2B240D3-373A-4ABE-8C36-5978C4A633B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B240D3-373A-4ABE-8C36-5978C4A633B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B240D3-373A-4ABE-8C36-5978C4A633B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B240D3-373A-4ABE-8C36-5978C4A633B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33B67F8E-04E4-4B34-A243-3DD2EA2DC936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33B67F8E-04E4-4B34-A243-3DD2EA2DC936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33B67F8E-04E4-4B34-A243-3DD2EA2DC936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33B67F8E-04E4-4B34-A243-3DD2EA2DC936}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{12F6A39C-C1CB-42D4-846A-7627BB06FB25} = {D2785A03-DC2C-45F9-89F3-9E485FDB1DA5}
+		{1946EE64-5C83-4FD2-9FFD-7D81FA3027CB} = {E0CD92D3-D7AE-4BB5-9D1F-472B80CF2F44}
+		{25364627-4343-4D20-8998-458E7B8EDAE5} = {E0CD92D3-D7AE-4BB5-9D1F-472B80CF2F44}
+		{635B04EA-0787-4891-8501-484BA5F77BCF} = {ECF20CAE-ADBC-47AC-9A5A-C1D8BAC0AD90}
+		{8DAF3509-0DD9-4FB6-9E55-5357BEA97261} = {F01F6C0A-B15D-410B-8661-2A4DCFC0165D}
+		{3FBACED1-6F03-4AE2-AEB2-45A4953E94EB} = {5BA273C5-448E-4C0E-BFE2-DF9FF81A80E0}
+		{B2B240D3-373A-4ABE-8C36-5978C4A633B1} = {E0CD92D3-D7AE-4BB5-9D1F-472B80CF2F44}
+		{33B67F8E-04E4-4B34-A243-3DD2EA2DC936} = {0067C5B3-13AD-4244-95DC-5EBC77C7E064}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2E5DB2D-76BE-4BCC-AEC1-EDBB69FE3B03}
+	EndGlobalSection
+EndGlobal
